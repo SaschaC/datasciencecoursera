@@ -1,18 +1,16 @@
 # course project
 
-setwd("C:\\Users\\Sascha Coridun\\Documents\\Arbeit\\courses\\coursera\\Getting and cleaning data\\Week 3")
+X_test <- read.table("./getdata-projectfiles-UCI HAR Dataset/UCI HAR Dataset/test/X_test.txt", quote="\"")
+Y_test <- scan("./getdata-projectfiles-UCI HAR Dataset/UCI HAR Dataset/test/Y_test.txt", quote="\"")
 
-X_test <- read.table("./data/getdata-projectfiles-UCI HAR Dataset/UCI HAR Dataset/test/X_test.txt", quote="\"")
-Y_test <- scan("./data/getdata-projectfiles-UCI HAR Dataset/UCI HAR Dataset/test/Y_test.txt", quote="\"")
-
-X_train <- read.table("./data/getdata-projectfiles-UCI HAR Dataset/UCI HAR Dataset/train/X_train.txt", quote="\"")
-Y_train <- scan("./data/getdata-projectfiles-UCI HAR Dataset/UCI HAR Dataset/train/Y_train.txt", quote="\"")
+X_train <- read.table("./getdata-projectfiles-UCI HAR Dataset/UCI HAR Dataset/train/X_train.txt", quote="\"")
+Y_train <- scan("./getdata-projectfiles-UCI HAR Dataset/UCI HAR Dataset/train/Y_train.txt", quote="\"")
 
 
-subject_train = scan("./data/getdata-projectfiles-UCI HAR Dataset/UCI HAR Dataset/train/subject_train.txt", quote="\"")
-subject_test = scan("./data/getdata-projectfiles-UCI HAR Dataset/UCI HAR Dataset/test/subject_test.txt", quote="\"")
+subject_train = scan("./getdata-projectfiles-UCI HAR Dataset/UCI HAR Dataset/train/subject_train.txt", quote="\"")
+subject_test = scan("./getdata-projectfiles-UCI HAR Dataset/UCI HAR Dataset/test/subject_test.txt", quote="\"")
 
-activity_labels = read.table("./data/getdata-projectfiles-UCI HAR Dataset/UCI HAR Dataset/activity_labels.txt", quote="\"")
+activity_labels = read.table("./getdata-projectfiles-UCI HAR Dataset/UCI HAR Dataset/activity_labels.txt", quote="\"")
 
 activityNumber = c(Y_train, Y_test)
 subjects = c(subject_train, subject_test)
@@ -25,7 +23,7 @@ d = rbind(X_train, X_test)
 
 # first determine the columns, then subset columns:
 
-features = read.table("./data/getdata-projectfiles-UCI HAR Dataset/UCI HAR Dataset/features.txt", quote="\"")
+features = read.table("./getdata-projectfiles-UCI HAR Dataset/UCI HAR Dataset/features.txt", quote="\"")
 feature_names = features[,2]
 mean_features = grep("mean()", feature_names)
 std_features = grep("std()", feature_names)
@@ -67,5 +65,5 @@ average=arrange(average, average$Group.1) # sort the table
 colnames(average) = c("subject", "feature", "activityName", "activityNumber", "value")
 head(average)
 
-write.table(average, file = "./data/tidy_set.csv", row.names = F)
+write.table(average, file = "tidy_set.txt", row.names = F, sep = "\t")
 ?write.table
