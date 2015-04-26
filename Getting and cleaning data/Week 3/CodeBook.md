@@ -11,23 +11,23 @@ output: html_document
 
 subject
 
-Numeric vector indicating subject id
+&nbspNumeric vector indicating subject id
   
 feature
 
-Factor indicating the mean and standard (Std) deviation variables estimated from the features from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ (see features_info.txt in the project data folder).
+&nbspFactor indicating the mean and standard (Std) deviation variables estimated from &nbspthe features from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ &nbspand tGyro-XYZ (see features_info.txt in the project data folder).
 
 activityName
 
-Factor indicating activity during measurement
+&nbspFactor indicating activity during measurement
 
 activityNumber
 
-Numeric vector indicating a unique number for each activity name
+&nbspNumeric vector indicating a unique number for each activity name
 
 value
 
-Numeric vector containing the average of each variable for each subject and activity
+&nbspNumeric vector containing the average of each variable for each subject and activity
 
 
 ###Data cleaning process
