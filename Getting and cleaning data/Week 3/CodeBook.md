@@ -11,7 +11,7 @@ output: html_document
 
 subject
 
-&nbspNumeric vector indicating subject id
+Numeric vector indicating subject id
   
 feature
 
@@ -19,15 +19,15 @@ Factor indicating the mean and standard (Std) deviation variables estimated from
 
 activityName
 
-&nbspFactor indicating activity during measurement
+Factor indicating activity during measurement
 
 activityNumber
 
-&nbspNumeric vector indicating a unique number for each activity name
+Numeric vector indicating a unique number for each activity name
 
 value
 
-&nbspNumeric vector containing the average of each variable for each subject and activity
+Numeric vector containing the average of each variable for each subject and activity
 
 
 ###Data cleaning process
