@@ -15,7 +15,7 @@ subject
   
 feature
 
-&nbspFactor indicating the mean and standard (Std) deviation variables estimated from &nbspthe features from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ &nbspand tGyro-XYZ (see features_info.txt in the project data folder).
+Factor indicating the mean and standard (Std) deviation variables estimated from pthe features from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ (see features_info.txt in the project data folder).
 
 activityName
 
